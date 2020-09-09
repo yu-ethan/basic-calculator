@@ -1,0 +1,1 @@
+Basic calculator built using Javascript, as a project part of The Odin Project curriculum.
