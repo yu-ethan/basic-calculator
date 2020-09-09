@@ -1,0 +1,86 @@
+body {
+    font-family: arial, sans-serif;
+    background: #add8e6;
+    color: white;
+}
+
+#intro {
+    text-align: center;
+}
+
+#created-by {
+    font-size: 20px;
+}
+
+#calculator {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    background: #3b5998;
+}
+
+#display {
+    height: 80px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background: white;
+    color: black;
+    text-align: right;
+    position: relative;
+}
+
+#result {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-size: 40px;
+}
+
+#equationLine {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: grey;
+}
+
+#buttons {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(5, 60px);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+button {
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#equal {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background: orange;
+    color: white;
+}
+
+#clear {
+    background: red;
+    color: white;
+}
+
+.operator, #neg{
+    background: #e480b7;
+    color: white;
+}
