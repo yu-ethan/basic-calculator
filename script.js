@@ -81,6 +81,9 @@ function initKeyboardInput(){
                 calculator.addOperator('mod');
                 displayEquation('%');
             }
+            else if(e.key == '.'){
+                calculator.changeValue('.');
+            }
             else if(!isNaN(e.key)){
                 calculator.changeValue(e.key);
             }
@@ -121,12 +124,16 @@ const calculator = {
             if(value == '.' && this.firstValue == ''){
                 value = '0.';
             }
-            this.firstValue += value;
+            if(this.firstValue.length < 15){
+                this.firstValue += value;
+            }
         } else {
             if(value == '.' && this.secondValue == ''){
                 value = '0.';
             }
-            this.secondValue += value;
+            if(this.secondValue.length < 15){
+                this.secondValue += value;
+            }
         }
         displayCurrentNum();
     },
